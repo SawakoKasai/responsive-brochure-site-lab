@@ -1,0 +1,99 @@
+    *{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    
+    #contents  {
+        background-color: #ffffff;
+        opacity: 1;
+        background-image: linear-gradient(0deg, #ffffff 50%, #d5d5d5 50%);
+        background-size: 6px 6px;
+    }
+
+    #nav {
+        background-color: rgb(22, 28, 46);
+        height: 50px;
+    }
+
+    #nav .navmenu {
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color:rgb(22, 28, 46);
+    }
+
+    #nav .navmenu h1{
+        width: 250px;
+        margin: 0;
+        padding: 10px;
+        color: white;
+        float: left;
+    }
+    #nav ul{
+        list-style-type: none;
+        margin: 0;
+        float: right;
+    }
+
+    #nav ul li{
+        width: 100px;
+        float: left;
+    }
+
+    #nav ul li a{
+       display: block;
+       padding: 15px;
+       text-decoration: none;
+       text-align: center;
+       color: white;
+    }
+
+    #nav ul li a:hover{
+        text-decoration: overline;
+      }
+
+    .clear{
+        clear: both;
+    }
+
+
+    #logo{
+        max-width: 1000px; 
+        margin: 0 auto;
+        background-color: white;
+        padding-top: 10px;
+        padding-bottom: 5px;
+
+    }
+    
+    .fish{
+        width: 40px;
+        padding-left: 15px;
+        }
+
+    aside{
+        float: right;
+        padding-top: 5px;
+        padding-right: 10px;  
+    }
+
+    aside span img{
+        padding-left: 3px;
+
+    }
+     /*
+    aside li{
+        float: left;
+    }
+
+    aside li a{
+        display: none;        
+    }
+    */
+
+    #wrapper {
+        max-width: 1000px; 
+        margin: 0 auto;
+        padding: 0px;
+        text-align: center;
+        background-color: white;
+    } 

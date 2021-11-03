@@ -147,7 +147,7 @@
         background-color: white;
     } 
 
-    #wrapper img{
+    .mainimg{
         max-width: 980px;
         border-radius: 10px;
     } 
@@ -155,7 +155,7 @@
     /*About Bonchi Section*/
 
     h2{
-        margin-top: 30px;
+        margin-top: 50px;
     }
 
 
@@ -164,15 +164,64 @@
     }
 
 
-    #about .aboutimg{
-        width: 700px;
+    .aboutimg{
+        max-width: 700px;
         border-radius: 10px;
     }
 
+    /*Food Section*/
+    #food{
+        height: 100%;
+        margin: 20px;
+    }
 
-    /*About Toys Section*/
+    .foodcontent img{
+        border-radius: 50%;
+    }
+
+    .foodcontent{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+    }
+
+    .foodcontent{
+        text-align: center;
+    }
+
+    .fooditem1{
+        background-color: white;
+        padding: 10px;
+      }
+
+    .fooditem2{
+        background-color: white;
+        padding: 10px;
+    }
+
+    .fooditem3{
+        background-color: white;
+        padding: 10px;
+    }
+
+
+    /*Toys Section*/
 
     
+
+    /*Footer Section*/
+
+    footer{
+    background-color: rgb(22, 28, 46);
+    height: 50px;
+    text-align: center;
+    }         
+
+    footer p{
+        color: white;
+        margin: 0;
+        padding: 10px;
+    }
 
 
     /*Media Query*/
@@ -207,6 +256,25 @@
             width: 100%;
         }
 
+        #about img{
+            width: 100%;
+        }
+
+
+        .foodcontent{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-area: 
+            "fooditem1"
+            "fooditem2"
+            "fooditem3";
+        }
+
+        .foodcontent img{
+            max-width: 50%;
+        }
+        
+
     }
 
 
@@ -234,4 +302,21 @@
             width: 100%;
         }
 
+        #about img{
+            width: 100%;
+        }
+
+        .foodcontent{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-area: 
+            "fooditem1"
+            "fooditem2"
+            "fooditem3";
+        }
+
+        .foodcontent img{
+            max-width: 70%;
+        }
+        
     }

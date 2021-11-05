@@ -172,7 +172,7 @@
     /*Food Section*/
     #food{
         height: 100%;
-        margin: 20px;
+        padding: 20px;
     }
 
     .foodcontent img{
@@ -190,24 +190,35 @@
     }
 
     .fooditem1{
-        background-color: white;
         padding: 10px;
       }
 
     .fooditem2{
-        background-color: white;
         padding: 10px;
     }
 
     .fooditem3{
-        background-color: white;
         padding: 10px;
     }
 
 
     /*Toys Section*/
 
+    #toys{
+        height: 100%;
+        padding: 20px;
+    }
+
+    .toyscontent img{
+        border-radius: 5px;
+    }
     
+    .toyscontent{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        
+    }
+
 
     /*Footer Section*/
 
@@ -260,7 +271,6 @@
             width: 100%;
         }
 
-
         .foodcontent{
             grid-template-columns: 1fr;
             grid-template-rows: auto;
@@ -274,6 +284,18 @@
             max-width: 50%;
         }
         
+        .toyscontent{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-area: 
+            "toyitem1"
+            "toyitem2"
+            "toyitem3";
+        }
+
+        .toyscontent img{
+            max-width: 50%;
+        }
 
     }
 
@@ -319,4 +341,17 @@
             max-width: 70%;
         }
         
+        .toyscontent{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-area: 
+            "toyitem1"
+            "toyitem2"
+            "toyitem3";
+        }
+
+        .toyscontent img{
+            max-width: 70%;
+        }
+
     }

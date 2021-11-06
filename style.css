@@ -60,50 +60,61 @@
 
 
     /*About Mobile navi Section*/
-
-    .mv-menubox{
-        position: absolute;
-        top: 22px;
-        right: 3px;
-    }
-    input{
-        display: none;
-    }
-
-    .line{
-        width: 20px;
-        height: 3px;
-        background-color: white;
-        margin: 3px;        
-    }
-
-    .mvcontent{
-        background-color: rgba(74, 76, 109, 0.9);
+    .dropbtn{
         width: 150px;
-        height: 220px;
-        position: fixed;
-        transform: translateX(50px);
-    }
-
-    input:checked ~ .mvcontent{
-        transform: translateX(-135px);
-    }
-
-    .mobile-navmenu ul{
-        list-style: none;
-        
-    }
-
-    .mobile-navmenu ul li{
-        padding: 8px;
-    }
-
-    .mobile-navmenu ul a{
+        background-color: transparent;
         color: white;
-        text-decoration: none;
+        padding-top: 15px;
+        padding-bottom: 13px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown{
+        position: absolute;
+        top: 8px;
+        right: 0px;
+        padding-bottom: 13px;
+        display: inline-block;
+
+    }
+
+    .dropdown button{
         font-weight: bold;
     }
 
+    .dropdown-content {
+        display: none;
+        background-color: #aaaeb8f1;
+        width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: rgb(255, 255, 255);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content ul{
+        margin: 0 ;
+        padding-bottom: 10px;
+    }
+
+      .dropdown-content li{
+        list-style: none;  
+        }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        background-color: #535772;
+      }
 
     /*Fish Logo*/
     #logo{
@@ -181,7 +192,10 @@
 
     .foodcontent{
         display: grid;
+        /*
         grid-template-columns: auto auto auto;
+        */
+        grid-template-areas:"fooditem1 fooditem2 fooditem3";
         padding: 10px;
     }
 
@@ -191,14 +205,17 @@
 
     .fooditem1{
         padding: 10px;
+        grid-area: fooditem1;
       }
 
     .fooditem2{
         padding: 10px;
+        grid-area: fooditem2;
     }
 
     .fooditem3{
         padding: 10px;
+        grid-area: fooditem3;
     }
 
 
@@ -215,23 +232,28 @@
     
     .toyscontent{
         display: grid;
-        grid-template-columns: auto auto auto;
+        /*
+        grid-template-columns: auto auto auto;*/
+        grid-template-areas: "toysitem1 toysitem2 toysitem3";
         
     }
 
     .toysitem1{
         padding: 20px;
         margin: 5px;
+        grid-area: toysitem1;
       }
 
     .toysitem2{
         padding: 20px;
         margin: 5px;
+        grid-area: toysitem2;
     }
 
     .toysitem3{
         padding: 20px;
         margin: 5px;
+        grid-area: toysitem3;
     }
 
     /*Footer Section*/
@@ -253,7 +275,7 @@
 
     @media only screen and (min-width:1024px) 
     /* For PC */{
-        .mv-menubox{
+        .dropdown{
             display: none;
         }
     }
@@ -285,10 +307,19 @@
             width: 100%;
         }
 
+        /*
         .foodcontent{
             grid-template-columns: 1fr;
             grid-template-rows: auto;
             grid-area: 
+            "fooditem1"
+            "fooditem2"
+            "fooditem3";
+        }*/
+
+        .foodcontent{
+            display: grid;
+            grid-template:
             "fooditem1"
             "fooditem2"
             "fooditem3";
@@ -299,12 +330,11 @@
         }
         
         .toyscontent{
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-            grid-area: 
-            "toyitem1"
-            "toyitem2"
-            "toyitem3";
+            display: grid;
+            grid-template:
+            "toysitem1"
+            "toysitem2"
+            "toysitem3";
         }
 
         .toyscontent img{
@@ -345,7 +375,7 @@
         .foodcontent{
             grid-template-columns: 1fr;
             grid-template-rows: auto;
-            grid-area: 
+            grid-template-areas: 
             "fooditem1"
             "fooditem2"
             "fooditem3";
@@ -358,7 +388,7 @@
         .toyscontent{
             grid-template-columns: 1fr;
             grid-template-rows: auto;
-            grid-area: 
+            grid-template-areas: 
             "toyitem1"
             "toyitem2"
             "toyitem3";

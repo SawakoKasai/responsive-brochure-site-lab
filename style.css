@@ -318,8 +318,9 @@
         }*/
 
         .foodcontent{
-            display: grid;
-            grid-template:
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
             "fooditem1"
             "fooditem2"
             "fooditem3";
@@ -329,9 +330,11 @@
             max-width: 50%;
         }
         
+
         .toyscontent{
-            display: grid;
-            grid-template:
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
             "toysitem1"
             "toysitem2"
             "toysitem3";
@@ -389,9 +392,9 @@
             grid-template-columns: 1fr;
             grid-template-rows: auto;
             grid-template-areas: 
-            "toyitem1"
-            "toyitem2"
-            "toyitem3";
+            "toysitem1"
+            "toysitem2"
+            "toysitem3";
         }
 
         .toyscontent img{
